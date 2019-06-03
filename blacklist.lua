@@ -1,4 +1,4 @@
-PLUGIN.name = "Blacklist for bad guys" -- Не уверен, но щитаю ты можешь забрать это себе, потому что я это выкладывал в нейтралку.
+PLUGIN.name = "Blacklist for bad guys"
 PLUGIN.author = "Dobytchick"
 PLUGIN.desc = "This plugin dds a blacklist. Do not remove those who are in it, because they can harm your servers"
 

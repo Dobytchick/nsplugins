@@ -9,8 +9,8 @@ end
 function PLUGIN:PlayerDeath(client, inflictor, attacker)
     if client != attacker and IsValid(client) and IsValid(attacker) and attacker:IsPlayer() then
         if attacker:Team() == client:Team() then
-					attacker:setNetVar("rdm_counter", attacker:getNetVar("rdm_counter",0) + 1)
-					attacker:notify("Вы убили своего, если вы продолжите - вы получите бан")
+		attacker:setNetVar("rdm_counter", attacker:getNetVar("rdm_counter",0) + 1)
+		attacker:notify("Вы убили своего, если вы продолжите - вы получите бан")
         end
     end
 

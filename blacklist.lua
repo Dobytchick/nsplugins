@@ -1,6 +1,6 @@
 PLUGIN.name = "Blacklist for bad guys"
 PLUGIN.author = "Dobytchick, Carlsmei"
-PLUGIN.desc = "This plugin dds a blacklist. Do not remove those who are in it, because they can harm your servers"
+PLUGIN.desc = "This plugin adds a blacklist"
 
 local blacklist = {}
 

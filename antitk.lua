@@ -14,7 +14,7 @@ function PLUGIN:PlayerDeath(client, inflictor, attacker)
         end
     end
 	
-	timer.Create("CheckForKills",300,0,function()
+	timer.Create("CheckForKills"..attacker:SteamID(),300,0,function()
 		if attacker:getNetVar("killed_players",0) != 0 then
 			attacker:setNetVar("killed_players", attacker:getNetVar("killed_players",0) - 1)
 		end

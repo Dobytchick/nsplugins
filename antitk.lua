@@ -26,3 +26,9 @@ function PLUGIN:PlayerDeath(client, inflictor, attacker)
         end 
     end
 end
+
+function PLUGIN:PlayerDisconnected(ply)
+    if timer.Exists("CheckForKills"..ply:SteamID64()) then
+        timer:Remove()
+    end
+end

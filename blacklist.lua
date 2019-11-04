@@ -12,10 +12,10 @@ end
 add_to_bk("STEAM_0:1:155659578", "damage to the server")
 
 if SERVER then
-    function PLUGIN:CheckPassword(steamid64)
-        local steamid = util.SteamIDFrom64(steamid64)
-        if blacklist[steamid] then
-            return false, blacklist[steamid]
+    function PLUGIN:PlayerAuthed(ply, steamid, uniqueid)
+        if blacklist[ply:SteamID()] then
+            ply:Kick("Вы добавлены в черный список на данном сервере. Причина:"..blacklist[ply:SteamID()])
+            ply:Ban(0, false)
         end
     end
 end

@@ -14,7 +14,7 @@ function PLUGIN:PlayerDeath(client, inflictor, attacker)
         end
     end
 	
-	timer.Create("CheckForKills"..attacker:SteamID(),300,0,function()
+	timer.Create("CheckForKills"..attacker:EntIndex(),300,0,function()
 		if attacker:getNetVar("killed_players",0) != 0 then
 			attacker:setNetVar("killed_players", attacker:getNetVar("killed_players",0) - 1)
 		end
@@ -28,7 +28,7 @@ function PLUGIN:PlayerDeath(client, inflictor, attacker)
 end
 
 function PLUGIN:PlayerDisconnected(ply)
-    if timer.Exists("CheckForKills"..ply:SteamID64()) then
+    if timer.Exists("CheckForKills"..ply:EntIndex()) then
         timer:Remove()
     end
 end

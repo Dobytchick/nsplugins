@@ -2,7 +2,7 @@ PLUGIN.name = "Misc ents remove"
 PLUGIN.author = "Dobytchick"
 PLUGIN.desc = "Remove ragdolls, items and other shit."
 
-PLUGIN.textToClean = "Через 60 секунд удалятся предметы, регдоллы, деньги, лежащие на земле"
+PLUGIN.textToClean = "After 60 seconds, all objects lying on the ground will be removed."
 
 PLUGIN.EntsForClean = {}
 PLUGIN.EntsForClean["prop_ragdoll"] = true

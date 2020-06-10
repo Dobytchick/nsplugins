@@ -1,8 +1,10 @@
+local PLUGIN = PLUGIN
+
 PLUGIN.name = "Misc ents remove"
 PLUGIN.author = "Dobytchick"
 PLUGIN.desc = "Remove ragdolls, items and other shit."
 
-PLUGIN.textToClean = "After 60 seconds, all objects lying on the ground will be removed."
+PLUGIN.textToClean = "Через 60 секунд удалятся предметы, регдоллы, деньги, лежащие на земле"
 
 PLUGIN.EntsForClean = {}
 PLUGIN.EntsForClean["prop_ragdoll"] = true
@@ -11,7 +13,7 @@ PLUGIN.EntsForClean["nut_money"] = true
 
 nut.config.add("cleanTime", 700, "Seconds before garbage disposal", nil, {
 	data = {min = 1, max = 1000},
-	category = "Misc Ents Remove"
+    category = "Misc Ents Remove",
 })
 
 if CLIENT then

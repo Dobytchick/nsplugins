@@ -19,7 +19,7 @@ nut.config.add("cleanTime", 700, "Seconds before garbage disposal", nil, {
 if CLIENT then
     timer.Create("notify_1_minute", nut.config.get("cleanTime") - 60, 0, function()
         for i=1,2 do
-            chat.AddText(Color(217, 89, 89),"[!] "..PLUGIN.textToClean)
+            chat.AddText(Color(217, 89, 89),"[!] " .. PLUGIN.textToClean)
         end
     end)
 end
